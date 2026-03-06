@@ -176,9 +176,19 @@ def set_bg_and_style():
         }}
         /* 下拉菜单颜色 */
         ul[data-baseweb="menu"] {{
-            background-color: rgba(30, 30, 40, 0.95) !important;
+            background-color: rgba(30, 30, 45, 0.6) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
             border-radius: 12px !important;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }}
+        /* 下拉菜单选项文字颜色 */
+        ul[data-baseweb="menu"] li {{
+            color: #ffffff !important;
+            background-color: transparent !important;
+        }}
+        ul[data-baseweb="menu"] li:hover {{
+            background-color: rgba(255, 255, 255, 0.1) !important;
         }}
 
         /* 6. 按钮美化 - 渐变夕阳色 */
