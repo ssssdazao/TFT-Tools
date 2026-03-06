@@ -38,6 +38,31 @@ def set_bg_and_style():
         f"""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zcool+KuaiLe&family=Nunito:wght@400;700&display=swap');
+        
+        /* 增强全局字体清晰度 - 强制浅色 */
+        body, p, li, span, div {
+            color: #ffffff;
+        }
+        
+        /* 针对 Streamlit Markdown 文本的增强 */
+        .stMarkdown p, .stMarkdown li {
+            color: #ffffff !important;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+            font-weight: 500;
+        }
+        
+        /* 输入框 Label 增强 */
+        .stSelectbox label, .stNumberInput label, .stTextInput label, .stSlider label {
+            color: #ffffff !important;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+            font-weight: 600 !important;
+            font-size: 1rem !important;
+        }
+
+        /* 侧边栏文字增强 */
+        [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label, [data-testid="stSidebar"] div {
+            color: #ffffff !important;
+        }
 
         .stApp {{
             {bg_style}
