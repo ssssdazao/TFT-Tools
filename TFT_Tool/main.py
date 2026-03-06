@@ -174,20 +174,11 @@ def set_bg_and_style():
             border-color: #ff9a9e !important;
             background-color: rgba(255, 255, 255, 0.15) !important;
         }}
-        /* 下拉菜单颜色 - 保持默认背景（通常是白色），仅修改字体 */
+        /* 下拉菜单颜色 */
         ul[data-baseweb="menu"] {{
+            background-color: rgba(30, 30, 40, 0.95) !important;
             border-radius: 12px !important;
-            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-        }}
-        /* 下拉菜单选项文字颜色 - 改为深色 */
-        ul[data-baseweb="menu"] li {{
-            color: #000000 !important;
-            background-color: transparent !important;
-            font-weight: 600 !important;
-        }}
-        ul[data-baseweb="menu"] li:hover {{
-            background-color: rgba(0, 0, 0, 0.05) !important;
-            color: #000000 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }}
 
         /* 6. 按钮美化 - 渐变夕阳色 */
