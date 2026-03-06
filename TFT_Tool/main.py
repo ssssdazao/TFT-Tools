@@ -174,11 +174,31 @@ def set_bg_and_style():
             border-color: #ff9a9e !important;
             background-color: rgba(255, 255, 255, 0.15) !important;
         }}
-        /* 下拉菜单颜色 */
-        ul[data-baseweb="menu"] {{
-            background-color: rgba(30, 30, 40, 0.95) !important;
+        /* 下拉菜单容器透明化 */
+        div[data-baseweb="popover"] > div {{
+            background-color: rgba(30, 30, 45, 0.8) !important;
+            backdrop-filter: blur(12px) !important;
             border-radius: 12px !important;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }}
+
+        /* 列表项文字颜色 - 强制黑色 */
+        ul[data-baseweb="menu"] li {{
+            color: #000000 !important;
+            background-color: transparent !important;
+            font-weight: 700 !important;
+        }}
+
+        /* 鼠标悬停时的选中项背景 */
+        ul[data-baseweb="menu"] li[aria-selected="true"],
+        ul[data-baseweb="menu"] li:hover {{
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: #000000 !important;
+        }}
+
+        /* 下拉框选中后的文字颜色（输入框内） */
+        div[data-baseweb="select"] span {{
+             color: #ffffff !important; /* 输入框内保持白色 */
         }}
 
         /* 6. 按钮美化 - 渐变夕阳色 */

@@ -155,6 +155,24 @@ def set_bg_and_style():
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }}
+
+        /* 按钮背景透明化 */
+        .stButton > button {{
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            background-image: none !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }}
+        .stButton > button:hover {{
+            background-color: rgba(255, 255, 255, 0.25) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            transform: translateY(-2px);
+        }}
+        .stButton > button:active {{
+            background-color: rgba(255, 255, 255, 0.3) !important;
+        }}
     </style>
     """,
         unsafe_allow_html=True,
